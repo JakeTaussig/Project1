@@ -1,6 +1,3 @@
-// Created By: Jake Taussig
-// To complile: main.cpp, and then ./a.out
-
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -29,7 +26,7 @@ int main()
     vector<vector<int>> dfa = convertToNum(temp);
     int c = 0;
     c = count(dfa, temp, n);
-    cout << "The number of strings of length " << n << "accepted by the DFA is " << c << endl;
+    cout << "The number of strings of length " << n << " accepted by the DFA is " << c << endl;
 }
 
 // Counts the number of strings of length n accepted by a DFA

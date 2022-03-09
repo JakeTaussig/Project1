@@ -1,3 +1,14 @@
+Problem 1 was done by Jake and problem 2 was done by Nicole
+
+
+CS 454 Project 1, Problem 1
+
+How to run on blue:
+> g++ main.cpp
+> ./a.out
+> 6 (or any other n)
+
+
 CS 454 Project 1, Problem 2
 
 How to run on blue: 
@@ -8,6 +19,8 @@ How to run on blue:
 
 The q(or any other char that is not an int) is to specify the end 
 of the allowed digits.
+
+
 
 
 
