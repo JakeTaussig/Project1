@@ -21,12 +21,15 @@ vector<int> convertToCurrent(vector<vector<int>> dfa);
 
 int main()
 {
+    int n;
+    cout << "Enter n:" << endl;
+    cin >> n;
     vector<vector<string>> temp = createDFA();
     // dfa has state 0 - 1365 with 0 being start state, aka nullstr and 1365 being the error state
     vector<vector<int>> dfa = convertToNum(temp);
     int c = 0;
-    c = count(dfa, temp, 6);
-    cout << c << endl;
+    c = count(dfa, temp, n);
+    cout << "The number of strings of length " << n << "accepted by the DFA is " << c << endl;
 }
 
 // Counts the number of strings of length n accepted by a DFA
