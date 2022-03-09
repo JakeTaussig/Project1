@@ -4,6 +4,8 @@ Problem 1 was done by Jake and problem 2 was done by Nicole
 CS 454 Project 1, Problem 1
 
 How to run on blue:
+> When starting directory is Project1:
+> cd Problem1
 > g++ main.cpp
 > ./a.out
 > 6 (or any other n)
