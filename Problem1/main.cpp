@@ -1,3 +1,5 @@
+// Created By: Jake Taussig
+
 #include <iostream>
 #include <vector>
 #include <queue>
@@ -30,7 +32,6 @@ int main()
 }
 
 // Counts the number of strings of length n accepted by a DFA
-// The way I did this needs both the int and string versions of the dfa to be passed.
 int count(vector<vector<int>> dfa, vector<vector<string>> strDfa,  int n) {
     int temp = 0;
     vector<int> current = convertToCurrent(dfa);
@@ -65,6 +66,7 @@ int count(vector<vector<int>> dfa, vector<vector<string>> strDfa,  int n) {
     return current.at(0);
 }
 
+// Creates the initial DFA of strings
 vector<vector<string>> createDFA()
 {
     // a = 1, b = 2, c = 3, d = 4
@@ -101,6 +103,7 @@ vector<vector<string>> createDFA()
     return dfa;
 }
 
+// Creates 4 rows of the DFA.
 void createDFARows(vector<vector<string>> &dfa, int row)
 {
     vector<string> temp;
@@ -117,7 +120,7 @@ void createDFARows(vector<vector<string>> &dfa, int row)
     }
 }
 
-
+// Checks if a string is an accepting state within the DFA.
 bool isValid(string s)
 {
     if (s.length() < 6)
@@ -144,6 +147,7 @@ bool isValid(string s)
         return true;
 }
 
+// Converts string dfa to int dfa.
 vector<vector<int>> convertToNum(vector<vector<string>> dfa)
 {
     
@@ -185,6 +189,7 @@ vector<int> convertToCurrent(vector<vector<int>> dfa) {
         return newDFA;
 }
 
+// Converts DFA string to it's corresponding int state.
 int convertStringToNum(string s)
 {
     int counter = 0;
@@ -206,6 +211,7 @@ int convertStringToNum(string s)
     return counter;
 }
 
+// Transition function for DFA.
 int delta(vector<vector<string>> dfa, int state, char next)
 {
     string strState = "";
@@ -231,6 +237,7 @@ int delta(vector<vector<string>> dfa, int state, char next)
     return 1365;
 }
 
+// For testing: prints a row of string dfa
 void printVecRow(vector<vector<string>> dfa, int row)
 {
     cout << dfa.at(row).at(0) << endl
@@ -239,6 +246,7 @@ void printVecRow(vector<vector<string>> dfa, int row)
          << dfa.at(row).at(3) << endl;
 }
 
+// For testing: prints a row of int dfa
 void printIntRow(vector<vector<int>> dfa, int row)
 {
     cout << dfa.at(row)[0] << endl
