@@ -14,6 +14,7 @@ How to run on blue:
 CS 454 Project 1, Problem 2
 
 How to run on blue: 
+> When starting directory is Project1:
 > g++ main.cpp Problem2.cpp
 > ./a.out
 > 26147
